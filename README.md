@@ -3,7 +3,8 @@ Repositório que visa armazenar implemetações de estrutura de dados em algumas
 
 ## Conceitos
 * Pilhas;
-* Listas ligadas.
+* Listas;
+* Listas ligadas;
 
 
 ## Tecnologias
