@@ -6,23 +6,26 @@
 LinkedList* initializerLinkedList(){
     LinkedList *li = (LinkedList*) malloc(sizeof(LinkedList));
     if(li != NULL){
-        return li;
+        li->head = NULL;
     }
+    return li;
     
     
 }
 
-Node* createNode(int value){
-    Node *no = (Node*) malloc(sizeof(Node));
-    no->value = value;
-    no->next = NULL;
-    return no;
-}
 
 void push(LinkedList *li, int value){
-    Node *newNode = createNode(value);
-    if(li->head->next == NULL){
+    Node *newNode = (Node*) malloc(sizeof(Node));
+    newNode->value = value;
+    newNode->next = NULL;
+    if(li->head == NULL){
         li->head = newNode;
+    }else{
+        Node *pointer = (Node*) malloc(sizeof(Node));
+        while (pointer->next != NULL){
+            pointer = pointer->next;
+        }
+        pointer->next = newNode;
     }
 
 
